@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Virtual | Vendas Online</title>
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- CSS separado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cabeçalho / Navbar -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <h1><i class="fas fa-store"></i> Loja<span>Express</span></h1>
+      </div>
+      <div class="carrinho-info" id="carrinho-btn">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="contador-carrinho">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <!-- Título da seção -->
+    <h2 class="section-title">Nossos Produtos</h2>
+
+    <!-- Grid de produtos (injetado via JS) -->
+    <div class="produtos-grid" id="produtos-grid"></div>
+
+    <!-- Área do carrinho (modal / painel) -->
+    <div class="carrinho-painel" id="carrinho-painel">
+      <div class="carrinho-header">
+        <h3><i class="fas fa-shopping-cart"></i> Seu Carrinho</h3>
+        <button class="fechar-carrinho" id="fechar-carrinho"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="carrinho-itens" id="carrinho-itens">
+        <!-- Itens do carrinho serão inseridos via JS -->
+        <p class="carrinho-vazio">Seu carrinho está vazio.</p>
+      </div>
+      <div class="carrinho-footer">
+        <div class="total">
+          <span>Total:</span>
+          <span id="total-carrinho">R$ 0,00</span>
+        </div>
+        <button class="btn-finalizar" id="finalizar-compra">Finalizar Compra</button>
+      </div>
+    </div>
+    <!-- Overlay para escurecer o fundo quando o carrinho estiver aberto -->
+    <div class="overlay" id="overlay"></div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 LojaExpress - Todos os direitos reservados.</p>
+      <p>contato@lojaexpress.com.br</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript separado -->
+  <script src="script.js"></script>
+</body>
+</html>
